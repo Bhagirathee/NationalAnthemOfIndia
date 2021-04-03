@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "www",
+    "predeploy": "npm run prodbuild",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

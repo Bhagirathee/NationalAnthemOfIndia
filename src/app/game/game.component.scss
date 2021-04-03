@@ -1,0 +1,87 @@
+body {
+    /* Grey Background so that white stripe doesn't bleed into background  */
+    background: #ccc;
+  }
+
+  .my-custom-class {
+    --background: #e5e5e5;
+  }
+
+  .my-custom-class .alert-wrapper {
+    background: #e5e5e5;
+  }
+
+  .center-any-object {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+  /* Make Flag at the center of the container  */
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  /* Ashoka Chakra Image */
+  .ashok_chakra {
+    height: 40px;
+    width: 40px;
+  }
+  /* Patriotic Message */
+  .message {
+    text-align: center;
+  }
+  /* Stripe  */
+  .stripe {
+    width: 90vw;
+    height: 60px;
+    border-style: dotted;
+  }
+ 
+  /* White Stripe */
+  .white {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+   /* Saffron Stripe  */
+   .saffron {
+    background: #FF9933;
+  }
+  /* Green Stripe  */
+  .green {
+    background: #138808;
+  }
+  
+  /* Color of INDIA */
+  .message span{
+    /* Navy Blue of Ashoka Chakra */
+    color: #000080;
+  }
+
+  
+.fade-in {
+  animation: fadein 5s;
+}
+.fade-out {
+  animation: fadeout 3s;
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

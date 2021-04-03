@@ -1,0 +1,78 @@
+.bk
+{
+    height: 68vh;
+//     background: rgb(233,89,42);
+// background: -moz-linear-gradient(0deg, rgba(233,89,42,1) 0%, rgba(255,255,255,1) 26%, rgba(42,162,76,1) 100%);
+// background: -webkit-linear-gradient(0deg, rgba(233,89,42,1) 0%, rgba(255,255,255,1) 26%, rgba(42,162,76,1) 100%);
+background: linear-gradient(0deg, rgba(42,162,76,1) 0%, rgba(255,255,255,1) 26%, rgba(233,89,42,1) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e9592a",endColorstr="#2aa24c",GradientType=1);
+}
+
+/* Solid border */
+hr.solid {
+  border-top: 2px solid #bbb;
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+   // background-color: DodgerBlue;
+  }
+  
+  .flex-container > div {
+    //background-color: #f1f1f1;
+    margin: 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .center-any-object {
+    display: flex;
+    justify-content: center;
+  }
+  
+  ion-col.center-any-object {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fade-in {
+    animation: fadein 2s;
+  }
+  .fade-out {
+    animation: fadeout 3s;
+  }
+  
+  @keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  @keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+
+  
+@keyframes zoominoutsinglefeatured {
+  0% {
+      transform: scale(1,1);
+  }
+  50% {
+      transform: scale(1.2,1.2);
+  }
+  100% {
+      transform: scale(1,1);
+  }
+}
+.vateup ion-img {
+	animation: zoominoutsinglefeatured 2s infinite ;
+}

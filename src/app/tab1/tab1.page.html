@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     <span style="font-size: 15px;">भारतीय राष्ट्रगान</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="fade-in">
+    <ion-slides pager="true" [options]="slideOpts" #signupslides>
+      <ion-slide *ngFor="let s of sliderOne.slidesItems" class="bk">
+        <span class="slide-text">
+          <div class="flex-container fade-in">
+            <div style="font-weight: bold;">{{s.bengoli}}</div>
+            <div >{{s.english}}</div>
+            <div style="font-size: 13px;">{{s.hindi}}</div>
+            <div *ngIf="s.id==5" class="center-any-object vateup">
+              <ion-fab-button routerLink="/tabs/game" (click)="goToGame()">
+                  <ion-icon name="flag-outline"></ion-icon>
+              </ion-fab-button>
+            </div>
+          </div>
+        </span>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <audio controls id="myAudio" #audioElement>
+    <source src="./../../assets/song.mp3" type="audio/mpeg" />
+  </audio>
+</ion-content>

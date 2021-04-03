@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <div *ngIf="!showMedal">Drag & Drop to make Tiranga</div>
+      <div *ngIf="showMedal">Congratulations!!!</div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div *ngIf="!showMedal" class="fade-in message">
+    <!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+    <ion-reorder-group
+      (ionItemReorder)="doReorder($event)"
+      disabled="false"
+      id="flag"
+    >
+      <div *ngFor="let item of items; let num = index">
+        <ion-reorder>
+          <ion-item>
+            <ion-label>
+              <!-- <div class="message">{{ item.val }}</div> -->
+              <div class="{{ item.cls }}">
+                <div *ngIf="item.showWheel">
+                  <img class="ashok_chakra" src="./../../assets/Chakra.png" />
+                </div>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-reorder>
+      </div>
+    </ion-reorder-group>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Flag of The Republic of India</ion-card-subtitle>
+        <ion-card-title>भारतीय ध्वज (तिरंगा)</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <span style="font-size: 10px;">
+        Saffron signifies Sacrifice, white signifies Peace and green signifies Prosparity. 
+        The blue wheel is the Ashoka Chakra, having 24
+        spokes, which inspires to work tirelessly.
+      </span>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="showMedal" style="text-align: center; padding: 10px;" class="fade-in">
+    <img src="./../../assets/Medal.jpg" alt="Medal" style="height: 45vh;" />
+
+    <div class="center-any-object">
+      <ion-fab-button
+        size="small"
+        (click)="toggleMedal()"
+      >
+        <ion-icon name="refresh-outline"></ion-icon>
+      </ion-fab-button>
+    </div>
+
+    <ion-card>
+      <!-- <ion-card-header>
+        <ion-card-subtitle>Concept & Execution</ion-card-subtitle>
+        <ion-card-title>Vani Kulkarni</ion-card-title>
+      </ion-card-header> -->
+      <ion-card-content>
+        <span style="font-size: 12px;"> Developed By:</span>
+         <span style="font-size: 15px;"> Vani Kulkarni</span>, 
+         <span style="font-size: 12px;"> Graphics Design:</span>
+        <span style="font-size: 15px;"> Mayuresh Kulkarni</span>
+      </ion-card-content>
+    </ion-card>
+ 
+  </div>
+
+ 
+</ion-content>
